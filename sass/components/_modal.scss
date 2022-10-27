@@ -40,14 +40,14 @@
   justify-content: center;
   padding: 0;
   cursor: pointer;
-  &:hover,
-  &:focus {
-    color: var(--accent-color);
-  }
 }
-
 .modal__close {
   fill: currentColor;
+}
+
+.modal__btn:hover,
+.modal__btn:focus {
+  color: var(--accent-color);
 }
 
 .is-hidden {
@@ -73,9 +73,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  &:not(:last-child) {
-    margin-bottom: 10px;
-  }
+}
+
+.form__field:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .form__field.comment {
@@ -115,15 +116,18 @@ label {
   top: 50%;
   left: 12px;
   display: inline-block;
+  .form__input:focus ~ & {
+    fill: var(--accent-color);
+  }
 }
 
 .form__input:focus {
   border-color: var(--accent-color);
 }
 
-.form__input:focus ~ .form__icon {
-  fill: var(--accent-color);
-}
+// .form__input:focus ~ .form__icon {
+//   fill: var(--accent-color);
+// }
 
 textarea {
   resize: none;
@@ -176,6 +180,19 @@ textarea {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; */
+  &:checked + .checkbox__check > .checkbox__icon {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    background-image: url(../images/svg/icon_check.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-origin: border-box;
+  }
+
+  &:focus + .checkbox__check > .checkbox__icon {
+    border-color: var(--accent-color);
+  }
 }
 
 .checkbox__icon {
@@ -187,19 +204,19 @@ textarea {
   margin-right: 7px;
 }
 
-.checkbox__input:checked + .checkbox__check > .checkbox__icon {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  background-image: url(../images/svg/icon_check.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
-  background-origin: border-box;
-}
+// .checkbox__input:checked + .checkbox__check > .checkbox__icon {
+//   background-color: var(--accent-color);
+//   border-color: var(--accent-color);
+//   background-image: url(../images/svg/icon_check.svg);
+//   background-repeat: no-repeat;
+//   background-position: 50% 50%;
+//   background-size: contain;
+//   background-origin: border-box;
+// }
 
-.checkbox__input:focus + .checkbox__check > .checkbox__icon {
-  border-color: var(--accent-color);
-}
+// .checkbox__input:focus + .checkbox__check > .checkbox__icon {
+//   border-color: var(--accent-color);
+// }
 
 .checkbox__accent {
   color: var(--accent-color);
