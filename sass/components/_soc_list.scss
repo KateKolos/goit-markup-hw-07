@@ -6,7 +6,7 @@
 }
 
 .soc__link {
-  color: var(--soc-clients-color);
+  color: var(--clients-border-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,6 +16,11 @@
   transition: background-color var(--transition-duration)
       var(--transition-timing-function),
     color var(--transition-duration) var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--container-bg-color);
+  }
 }
 
 .soc__icon {
