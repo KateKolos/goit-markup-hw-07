@@ -3,21 +3,21 @@
 
 @import "./base/reset";
 @import "./base/common";
+@import "./base/container";
+@import "./base/section";
 
-@import "./components/container";
-@import "./components/section";
+@import "./layouts/logo";
+@import "./layouts/header";
+@import "./layouts/footer";
+
 @import "./components/current";
-@import "./components/logo";
 @import "./components/title";
 @import "./components/soc_list";
-@import "./components/modal";
 @import "./components/button";
-
-@import "./layouts/header";
-@import "./layouts/hero";
-@import "./layouts/features";
-@import "./layouts/work";
-@import "./layouts/team";
-@import "./layouts/clients";
-@import "./layouts/footer";
-@import "./layouts/portfolio";
+@import "./components/hero";
+@import "./components/features";
+@import "./components/work";
+@import "./components/team";
+@import "./components/clients";
+@import "./components/portfolio";
+@import "./components/modal";
