@@ -386,7 +386,6 @@ span.logo__accent {
 }
 
 .btn {
-  display: block;
   margin: 0 auto;
   font-family: inherit;
   color: var(--container-bg-color);
@@ -915,4 +914,8 @@ textarea::placeholder {
   color: var(--accent-color);
   text-decoration: underline;
   margin-left: 5px;
+}
+
+.form__button {
+  display: block;
 }/*# sourceMappingURL=main.css.map */
